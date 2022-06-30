@@ -12,10 +12,10 @@ wd = webdriver.Firefox()
 class Test_Add_Group(unittest.TestCase):
     def set_up(self):
         self.wd = webdriver.Firefox()
-        self.wd.implicitly_wait(90)
+        self.wd.implicitly_wait(100)
 
     def open_home_page(self, wd):
-        wd.get("http://localhost/addressbook/addressbook/")
+        wd.get("http://localhost/addressbook//addressbook")
 
     def login(self, wd, username, password):
         wd.find_element(by=By.NAME, value="user").click()
